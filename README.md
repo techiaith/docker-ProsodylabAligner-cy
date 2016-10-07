@@ -10,4 +10,9 @@ Wedi i chi gwblhau hyn, defnyddiwch yr orchymun syml 'make' i osod Prosodylab-Al
 ` $ make`
 
 
+## Canlyniad Enghreifftiol
+
+![PraatScreenShot](http://techiaith.cymru/wp-content/uploads/2016/10/ProsodylabAligner.png)
+
+
 
