@@ -1,0 +1,12 @@
+
+
+
+Defnyddiwch y gorchymun :
+
+root@d4851bbb0ef1:/usr/local/Prosodylab-Aligner# python3 -m aligner -m aligner -r cym.zip -a data/ -d cym.dict
+
+i alinio'r ffeiliau sain a tanysgrifau Cymraeg sydd yn yr is-ffolder 'data' 
+
+
+
+

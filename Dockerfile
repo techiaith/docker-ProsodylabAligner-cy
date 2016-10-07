@@ -25,7 +25,8 @@ WORKDIR /usr/local/Prosodylab-Aligner
 RUN pip3 install -r requirements.txt
 
 RUN wget http://techiaith.cymru/htk/prosodylabaligner-cy/cym.tar.gz && tar zxvf cym.tar.gz && rm cym.tar.gz
+ADD Cychwyn-arni.txt .
 
 RUN python3 -m aligner --help
-
+RUN cat Cychwyn-arni.txt
 
