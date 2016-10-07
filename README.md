@@ -1,4 +1,4 @@
-# prosodylabaligner-cy
+# docker-ProsodylabAligner-cy
 
 Bydd angen i chi greu seilwaith HTK o fewn Docker er mwyn defnyddio'r project yma. Mae'r proses hwylus wedi'i esbonio yma:
 
