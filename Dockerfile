@@ -17,14 +17,13 @@ MAINTAINER Uned Technolegau Iaith, Prifysgol Bangor
 RUN apt-get update && apt-get install -y python3-pip libblas-dev liblapack-dev libatlas-base-dev gfortran
 
 WORKDIR /usr/local
-RUN wget https://github.com/prosodylab/Prosodylab-Aligner/archive/master.zip
+RUN wget https://github.com/techiaith/Prosodylab-Aligner/archive/master.zip
 RUN unzip master.zip && mv Prosodylab-Aligner-master Prosodylab-Aligner
 
 RUN mkdir -p /usr/local/Prosodylab-Aligner/data
 WORKDIR /usr/local/Prosodylab-Aligner
 RUN pip3 install -r requirements.txt
 
-RUN wget http://techiaith.cymru/htk/prosodylabaligner-cy/cym.tar.gz && tar zxvf cym.tar.gz && rm cym.tar.gz
 ADD Cychwyn-arni.txt .
 
 RUN python3 -m aligner --help
