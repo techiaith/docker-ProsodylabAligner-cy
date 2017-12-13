@@ -1,4 +1,3 @@
-# Copyright 2016 Prifysgol Bangor University
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -14,7 +13,12 @@
 FROM techiaith/htk
 MAINTAINER Uned Technolegau Iaith, Prifysgol Bangor
 
-RUN apt-get update && apt-get install -y python3-pip libblas-dev liblapack-dev libatlas-base-dev gfortran
+RUN apt-get update && apt-get install -y python3-pip libblas-dev liblapack-dev libatlas-base-dev gfortran locales
+
+RUN locale-gen cy_GB.UTF-8 
+ENV LANG cy_GB.UTF-8
+ENV LANGUAGE cy_GB.cy
+ENV LC_ALL cy_GB.UTF-8
 
 WORKDIR /usr/local
 RUN wget https://github.com/techiaith/Prosodylab-Aligner/archive/master.zip
