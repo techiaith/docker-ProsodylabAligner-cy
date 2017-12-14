@@ -20,16 +20,12 @@ ENV LANG cy_GB.UTF-8
 ENV LANGUAGE cy_GB.cy
 ENV LC_ALL cy_GB.UTF-8
 
-WORKDIR /usr/local
-RUN wget https://github.com/techiaith/Prosodylab-Aligner/archive/master.zip
-RUN unzip master.zip && mv Prosodylab-Aligner-master Prosodylab-Aligner
+RUN mkdir -p /usr/local/Prosodylab-Aligner/src
+WORKDIR /usr/local/Prosodylab-Aligner/src
 
-RUN mkdir -p /usr/local/Prosodylab-Aligner/data
-WORKDIR /usr/local/Prosodylab-Aligner
+ADD Prosodylab-Aligner/requirements.txt .
 RUN pip3 install -r requirements.txt
 
-ADD Cychwyn-arni.txt .
-
-RUN python3 -m aligner --help
-RUN cat Cychwyn-arni.txt
+RUN mkdir -p /usr/local/Prosodylab-Aligner/training/scripts
+ADD scripts /usr/local/Prosodylab-Aligner/training/scripts
 
